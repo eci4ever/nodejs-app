@@ -2,7 +2,7 @@
 CREATE DATABASE IF NOT EXISTS eci_sys;
 
 -- Pilih database
-USE users;
+USE eci_sys;
 
 -- Cipta jadual
 CREATE TABLE IF NOT EXISTS users (
