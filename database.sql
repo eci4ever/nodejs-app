@@ -4,6 +4,9 @@ CREATE DATABASE IF NOT EXISTS eci_sys;
 -- Pilih database
 USE eci_sys;
 
+-- Drop table jika wujud
+DROP TABLE IF EXISTS users;
+
 -- Cipta jadual
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
