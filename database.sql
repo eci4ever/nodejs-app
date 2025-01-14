@@ -1,5 +1,5 @@
 -- Cipta database
-CREATE DATABASE IF NOT EXISTS users;
+CREATE DATABASE IF NOT EXISTS eci_sys;
 
 -- Pilih database
 USE users;
