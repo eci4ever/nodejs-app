@@ -1,8 +1,8 @@
 // Dependencies
-const fs = require('fs');
-const https = require('https');
-const express = require('express');
-const path = require('path');
+import fs from "fs";
+import https from "https";
+import express from "express";
+import path from "path";
 
 const app = express();
 
@@ -17,9 +17,16 @@ const credentials = {
 	ca: ca
 };
 
+const __dirname = import.meta.dirname;
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke');
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
