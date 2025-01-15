@@ -13,7 +13,9 @@ CREATE TABLE IF NOT EXISTS users (
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    date_created TIMESTAMP NOT NULL DEFAULT NOW()
+    status ENUM('active', 'inactive') NOT NULL DEFAULT 'active',
+    date_created TIMESTAMP NOT NULL DEFAULT NOW(),
+    date_updated TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW()
 );
 
 

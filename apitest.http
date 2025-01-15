@@ -1,0 +1,39 @@
+### Get all users
+GET https://localhost/users
+Accept: application/json
+
+###
+
+### Get a specific user by ID
+GET https://localhost/users/3
+Accept: application/json
+
+###
+
+### Create a new user
+POST https://localhost/users
+Content-Type: application/json
+
+{
+    "name": "User 5",
+    "email": "user5@local.com",
+    "password": "password"
+}
+
+###
+
+### Update a user
+PUT https://localhost/users/2
+Content-Type: application/json
+
+{
+    "name": "User20",
+    "email": "user2@local.com",
+    "password": "password"
+}
+
+###
+
+### Delete a user
+DELETE https://localhost/users/5
+Accept: application/json
